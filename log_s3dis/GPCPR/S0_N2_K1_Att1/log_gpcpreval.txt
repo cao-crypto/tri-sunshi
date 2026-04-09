@@ -1,0 +1,1240 @@
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 0.6950 | Acc: 0.89 | 2025-12-21 14:27:35.688905
+[Eval] Iter: 200 | Loss: 0.4157 | Acc: 0.92 | 2025-12-21 14:27:40.952107
+[Eval] Iter: 300 | Loss: 1.1550 | Acc: 0.66 | 2025-12-21 14:27:46.180107
+[Eval] Iter: 400 | Loss: 1.5508 | Acc: 0.64 | 2025-12-21 14:27:51.442973
+[Eval] Iter: 500 | Loss: 0.4135 | Acc: 0.92 | 2025-12-21 14:27:56.665831
+[Eval] Iter: 600 | Loss: 1.9909 | Acc: 0.54 | 2025-12-21 14:28:01.912466
+[Eval] Iter: 700 | Loss: 1.9056 | Acc: 0.41 | 2025-12-21 14:28:07.233590
+[Eval] Iter: 800 | Loss: 0.9804 | Acc: 0.80 | 2025-12-21 14:28:12.522944
+[Eval] Iter: 900 | Loss: 1.5273 | Acc: 0.65 | 2025-12-21 14:28:17.894426
+[Eval] Iter: 1000 | Loss: 0.4922 | Acc: 0.93 | 2025-12-21 14:28:23.265054
+[Eval] Iter: 1100 | Loss: 0.9180 | Acc: 0.77 | 2025-12-21 14:28:28.649148
+[Eval] Iter: 1200 | Loss: 0.3564 | Acc: 0.94 | 2025-12-21 14:28:34.153459
+[Eval] Iter: 1300 | Loss: 0.4452 | Acc: 0.95 | 2025-12-21 14:28:39.724549
+[Eval] Iter: 1400 | Loss: 1.4363 | Acc: 0.61 | 2025-12-21 14:28:45.302527
+[Eval] Iter: 1500 | Loss: 0.9203 | Acc: 0.84 | 2025-12-21 14:28:50.837173
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.672605 -----
+----- [class 1]  IoU: 0.524925 -----
+----- [class 2]  IoU: 0.732872 -----
+----- [class 3]  IoU: 0.706097 -----
+----- [class 4]  IoU: 0.428487 -----
+----- [class 5]  IoU: 0.827738 -----
+----- [class 6]  IoU: 0.677043 -----
+
+=====[TEST] Loss: 1.0221 | Mean IoU: 0.649527 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 0.7585 | Acc: 0.88 | 2026-01-15 15:24:58.500753
+[Eval] Iter: 200 | Loss: 0.3858 | Acc: 0.92 | 2026-01-15 15:25:04.114255
+[Eval] Iter: 300 | Loss: 1.2717 | Acc: 0.65 | 2026-01-15 15:25:09.741979
+[Eval] Iter: 400 | Loss: 1.5912 | Acc: 0.69 | 2026-01-15 15:25:15.346968
+[Eval] Iter: 500 | Loss: 0.3881 | Acc: 0.94 | 2026-01-15 15:25:20.942755
+[Eval] Iter: 600 | Loss: 2.1031 | Acc: 0.51 | 2026-01-15 15:25:26.468028
+[Eval] Iter: 700 | Loss: 2.0103 | Acc: 0.41 | 2026-01-15 15:25:31.884363
+[Eval] Iter: 800 | Loss: 1.0476 | Acc: 0.80 | 2026-01-15 15:25:37.312995
+[Eval] Iter: 900 | Loss: 1.5253 | Acc: 0.66 | 2026-01-15 15:25:42.766896
+[Eval] Iter: 1000 | Loss: 0.4933 | Acc: 0.93 | 2026-01-15 15:25:48.156801
+[Eval] Iter: 1100 | Loss: 0.9746 | Acc: 0.74 | 2026-01-15 15:25:53.587362
+[Eval] Iter: 1200 | Loss: 0.3575 | Acc: 0.94 | 2026-01-15 15:25:59.146676
+[Eval] Iter: 1300 | Loss: 0.4477 | Acc: 0.95 | 2026-01-15 15:26:04.720457
+[Eval] Iter: 1400 | Loss: 1.6584 | Acc: 0.53 | 2026-01-15 15:26:10.325645
+[Eval] Iter: 1500 | Loss: 1.0493 | Acc: 0.80 | 2026-01-15 15:26:15.895957
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.682426 -----
+----- [class 1]  IoU: 0.521722 -----
+----- [class 2]  IoU: 0.743311 -----
+----- [class 3]  IoU: 0.702045 -----
+----- [class 4]  IoU: 0.410074 -----
+----- [class 5]  IoU: 0.831479 -----
+----- [class 6]  IoU: 0.699883 -----
+
+=====[TEST] Loss: 1.0315 | Mean IoU: 0.651419 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 0.5828 | Acc: 0.92 | 2026-01-15 18:05:41.289109
+[Eval] Iter: 200 | Loss: 0.2592 | Acc: 0.97 | 2026-01-15 18:05:46.577409
+[Eval] Iter: 300 | Loss: 1.1692 | Acc: 0.62 | 2026-01-15 18:05:51.891352
+[Eval] Iter: 400 | Loss: 1.4778 | Acc: 0.60 | 2026-01-15 18:05:57.205484
+[Eval] Iter: 500 | Loss: 0.5440 | Acc: 0.92 | 2026-01-15 18:06:02.511484
+[Eval] Iter: 600 | Loss: 2.3251 | Acc: 0.53 | 2026-01-15 18:06:07.841289
+[Eval] Iter: 700 | Loss: 2.2880 | Acc: 0.30 | 2026-01-15 18:06:13.178644
+[Eval] Iter: 800 | Loss: 0.9817 | Acc: 0.84 | 2026-01-15 18:06:18.520657
+[Eval] Iter: 900 | Loss: 1.5065 | Acc: 0.73 | 2026-01-15 18:06:23.870528
+[Eval] Iter: 1000 | Loss: 0.8859 | Acc: 0.82 | 2026-01-15 18:06:29.260447
+[Eval] Iter: 1100 | Loss: 1.0459 | Acc: 0.80 | 2026-01-15 18:06:34.638990
+[Eval] Iter: 1200 | Loss: 0.4195 | Acc: 0.95 | 2026-01-15 18:06:40.014283
+[Eval] Iter: 1300 | Loss: 0.4240 | Acc: 0.96 | 2026-01-15 18:06:45.408989
+[Eval] Iter: 1400 | Loss: 1.3729 | Acc: 0.68 | 2026-01-15 18:06:50.800270
+[Eval] Iter: 1500 | Loss: 1.4145 | Acc: 0.81 | 2026-01-15 18:06:56.313055
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.663995 -----
+----- [class 1]  IoU: 0.533963 -----
+----- [class 2]  IoU: 0.730608 -----
+----- [class 3]  IoU: 0.721506 -----
+----- [class 4]  IoU: 0.399777 -----
+----- [class 5]  IoU: 0.820099 -----
+----- [class 6]  IoU: 0.737023 -----
+
+=====[TEST] Loss: 1.1497 | Mean IoU: 0.657163 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.0937 | Acc: 0.92 | 2026-01-16 12:08:40.455879
+[Eval] Iter: 200 | Loss: 0.9423 | Acc: 0.88 | 2026-01-16 12:08:46.220004
+[Eval] Iter: 300 | Loss: 2.2713 | Acc: 0.69 | 2026-01-16 12:08:51.948619
+[Eval] Iter: 400 | Loss: 1.9581 | Acc: 0.78 | 2026-01-16 12:08:57.677730
+[Eval] Iter: 500 | Loss: 1.0193 | Acc: 0.88 | 2026-01-16 12:09:03.362588
+[Eval] Iter: 600 | Loss: 4.7347 | Acc: 0.53 | 2026-01-16 12:09:09.082356
+[Eval] Iter: 700 | Loss: 2.7675 | Acc: 0.40 | 2026-01-16 12:09:14.779025
+[Eval] Iter: 800 | Loss: 1.8542 | Acc: 0.84 | 2026-01-16 12:09:20.450068
+[Eval] Iter: 900 | Loss: 1.8045 | Acc: 0.83 | 2026-01-16 12:09:26.137552
+[Eval] Iter: 1000 | Loss: 1.1458 | Acc: 0.87 | 2026-01-16 12:09:31.794293
+[Eval] Iter: 1100 | Loss: 1.4446 | Acc: 0.81 | 2026-01-16 12:09:37.440595
+[Eval] Iter: 1200 | Loss: 0.8170 | Acc: 0.93 | 2026-01-16 12:09:43.078122
+[Eval] Iter: 1300 | Loss: 0.9194 | Acc: 0.95 | 2026-01-16 12:09:48.725748
+[Eval] Iter: 1400 | Loss: 1.7611 | Acc: 0.72 | 2026-01-16 12:09:54.367147
+[Eval] Iter: 1500 | Loss: 1.3911 | Acc: 0.90 | 2026-01-16 12:10:00.005116
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.699689 -----
+----- [class 1]  IoU: 0.565035 -----
+----- [class 2]  IoU: 0.717475 -----
+----- [class 3]  IoU: 0.729102 -----
+----- [class 4]  IoU: 0.462614 -----
+----- [class 5]  IoU: 0.834290 -----
+----- [class 6]  IoU: 0.729379 -----
+
+=====[TEST] Loss: 1.5610 | Mean IoU: 0.672983 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.0934 | Acc: 0.92 | 2026-03-05 17:28:14.607347
+[Eval] Iter: 200 | Loss: 0.9424 | Acc: 0.88 | 2026-03-05 17:28:20.429033
+[Eval] Iter: 300 | Loss: 2.2519 | Acc: 0.69 | 2026-03-05 17:28:26.772079
+[Eval] Iter: 400 | Loss: 1.9597 | Acc: 0.78 | 2026-03-05 17:28:33.054120
+[Eval] Iter: 500 | Loss: 1.0193 | Acc: 0.88 | 2026-03-05 17:28:39.226067
+[Eval] Iter: 600 | Loss: 4.7480 | Acc: 0.54 | 2026-03-05 17:28:51.853246
+[Eval] Iter: 700 | Loss: 2.7751 | Acc: 0.40 | 2026-03-05 17:28:57.773195
+[Eval] Iter: 800 | Loss: 1.8536 | Acc: 0.84 | 2026-03-05 17:29:03.644122
+[Eval] Iter: 900 | Loss: 1.8052 | Acc: 0.83 | 2026-03-05 17:29:09.497310
+[Eval] Iter: 1000 | Loss: 1.1445 | Acc: 0.87 | 2026-03-05 17:29:15.236519
+[Eval] Iter: 1100 | Loss: 1.4486 | Acc: 0.81 | 2026-03-05 17:29:20.992663
+[Eval] Iter: 1200 | Loss: 0.8186 | Acc: 0.93 | 2026-03-05 17:29:26.753793
+[Eval] Iter: 1300 | Loss: 0.9190 | Acc: 0.95 | 2026-03-05 17:29:32.518890
+[Eval] Iter: 1400 | Loss: 1.7606 | Acc: 0.72 | 2026-03-05 17:29:38.279222
+[Eval] Iter: 1500 | Loss: 1.3907 | Acc: 0.90 | 2026-03-05 17:29:44.177559
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.699652 -----
+----- [class 1]  IoU: 0.565010 -----
+----- [class 2]  IoU: 0.717330 -----
+----- [class 3]  IoU: 0.729139 -----
+----- [class 4]  IoU: 0.462576 -----
+----- [class 5]  IoU: 0.834340 -----
+----- [class 6]  IoU: 0.729334 -----
+
+=====[TEST] Loss: 1.5610 | Mean IoU: 0.672954 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7359 | Acc: 0.92 | 2026-03-13 22:50:13.631420
+[Eval] Iter: 200 | Loss: 1.5846 | Acc: 0.95 | 2026-03-13 22:50:23.478359
+[Eval] Iter: 300 | Loss: 2.9171 | Acc: 0.76 | 2026-03-13 22:50:33.185223
+[Eval] Iter: 400 | Loss: 2.5668 | Acc: 0.81 | 2026-03-13 22:50:42.903662
+[Eval] Iter: 500 | Loss: 1.7083 | Acc: 0.93 | 2026-03-13 22:50:52.667181
+[Eval] Iter: 600 | Loss: 2.9465 | Acc: 0.86 | 2026-03-13 22:51:02.550427
+[Eval] Iter: 700 | Loss: 3.4706 | Acc: 0.38 | 2026-03-13 22:51:12.351635
+[Eval] Iter: 800 | Loss: 3.2637 | Acc: 0.90 | 2026-03-13 22:51:22.149137
+[Eval] Iter: 900 | Loss: 2.8318 | Acc: 0.68 | 2026-03-13 22:51:32.016198
+[Eval] Iter: 1000 | Loss: 2.1241 | Acc: 0.81 | 2026-03-13 22:51:41.852692
+[Eval] Iter: 1100 | Loss: 2.3999 | Acc: 0.79 | 2026-03-13 22:51:51.724949
+[Eval] Iter: 1200 | Loss: 1.5453 | Acc: 0.96 | 2026-03-13 22:52:01.576609
+[Eval] Iter: 1300 | Loss: 1.6915 | Acc: 0.95 | 2026-03-13 22:52:11.376012
+[Eval] Iter: 1400 | Loss: 2.6800 | Acc: 0.70 | 2026-03-13 22:52:21.190242
+[Eval] Iter: 1500 | Loss: 2.3049 | Acc: 0.91 | 2026-03-13 22:52:30.912788
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.715227 -----
+----- [class 1]  IoU: 0.645983 -----
+----- [class 2]  IoU: 0.736392 -----
+----- [class 3]  IoU: 0.741715 -----
+----- [class 4]  IoU: 0.477908 -----
+----- [class 5]  IoU: 0.846804 -----
+----- [class 6]  IoU: 0.694595 -----
+
+=====[TEST] Loss: 2.3741 | Mean IoU: 0.690566 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7371 | Acc: 0.92 | 2026-03-16 12:59:44.365902
+[Eval] Iter: 200 | Loss: 1.5795 | Acc: 0.95 | 2026-03-16 12:59:54.001194
+[Eval] Iter: 300 | Loss: 2.9102 | Acc: 0.76 | 2026-03-16 13:00:03.463041
+[Eval] Iter: 400 | Loss: 2.5654 | Acc: 0.81 | 2026-03-16 13:00:12.904492
+[Eval] Iter: 500 | Loss: 1.7008 | Acc: 0.93 | 2026-03-16 13:00:22.369898
+[Eval] Iter: 600 | Loss: 2.9486 | Acc: 0.86 | 2026-03-16 13:00:31.646314
+[Eval] Iter: 700 | Loss: 3.4864 | Acc: 0.39 | 2026-03-16 13:00:40.976060
+[Eval] Iter: 800 | Loss: 3.2643 | Acc: 0.90 | 2026-03-16 13:00:50.312843
+[Eval] Iter: 900 | Loss: 2.8349 | Acc: 0.69 | 2026-03-16 13:00:59.658566
+[Eval] Iter: 1000 | Loss: 2.1089 | Acc: 0.81 | 2026-03-16 13:01:09.011290
+[Eval] Iter: 1100 | Loss: 2.4032 | Acc: 0.79 | 2026-03-16 13:01:18.369259
+[Eval] Iter: 1200 | Loss: 1.5450 | Acc: 0.96 | 2026-03-16 13:01:27.866797
+[Eval] Iter: 1300 | Loss: 1.6980 | Acc: 0.95 | 2026-03-16 13:01:37.448316
+[Eval] Iter: 1400 | Loss: 2.6661 | Acc: 0.70 | 2026-03-16 13:01:47.022632
+[Eval] Iter: 1500 | Loss: 2.3048 | Acc: 0.91 | 2026-03-16 13:01:56.632310
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.715471 -----
+----- [class 1]  IoU: 0.646398 -----
+----- [class 2]  IoU: 0.736561 -----
+----- [class 3]  IoU: 0.742907 -----
+----- [class 4]  IoU: 0.477985 -----
+----- [class 5]  IoU: 0.846807 -----
+----- [class 6]  IoU: 0.694319 -----
+
+=====[TEST] Loss: 2.3735 | Mean IoU: 0.690830 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7363 | Acc: 0.92 | 2026-03-25 11:18:40.023386
+[Eval] Iter: 200 | Loss: 1.5966 | Acc: 0.95 | 2026-03-25 11:18:49.698149
+[Eval] Iter: 300 | Loss: 2.9248 | Acc: 0.76 | 2026-03-25 11:18:59.227764
+[Eval] Iter: 400 | Loss: 2.5645 | Acc: 0.81 | 2026-03-25 11:19:08.722875
+[Eval] Iter: 500 | Loss: 1.7083 | Acc: 0.93 | 2026-03-25 11:19:18.273155
+[Eval] Iter: 600 | Loss: 2.9487 | Acc: 0.86 | 2026-03-25 11:19:27.903410
+[Eval] Iter: 700 | Loss: 3.4859 | Acc: 0.39 | 2026-03-25 11:19:37.486328
+[Eval] Iter: 800 | Loss: 3.2637 | Acc: 0.90 | 2026-03-25 11:19:47.086989
+[Eval] Iter: 900 | Loss: 2.8320 | Acc: 0.68 | 2026-03-25 11:19:56.705371
+[Eval] Iter: 1000 | Loss: 2.1243 | Acc: 0.81 | 2026-03-25 11:20:06.350048
+[Eval] Iter: 1100 | Loss: 2.4009 | Acc: 0.79 | 2026-03-25 11:20:16.063341
+[Eval] Iter: 1200 | Loss: 1.5447 | Acc: 0.96 | 2026-03-25 11:20:25.819088
+[Eval] Iter: 1300 | Loss: 1.6915 | Acc: 0.95 | 2026-03-25 11:20:35.505091
+[Eval] Iter: 1400 | Loss: 2.6725 | Acc: 0.70 | 2026-03-25 11:20:45.181369
+[Eval] Iter: 1500 | Loss: 2.3049 | Acc: 0.91 | 2026-03-25 11:20:54.842436
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.715250 -----
+----- [class 1]  IoU: 0.645975 -----
+----- [class 2]  IoU: 0.736846 -----
+----- [class 3]  IoU: 0.742240 -----
+----- [class 4]  IoU: 0.477866 -----
+----- [class 5]  IoU: 0.846796 -----
+----- [class 6]  IoU: 0.694498 -----
+
+=====[TEST] Loss: 2.3738 | Mean IoU: 0.690703 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7364 | Acc: 0.92 | 2026-03-25 11:34:48.527888
+[Eval] Iter: 200 | Loss: 1.5990 | Acc: 0.95 | 2026-03-25 11:34:59.122416
+[Eval] Iter: 300 | Loss: 2.9289 | Acc: 0.76 | 2026-03-25 11:35:09.708079
+[Eval] Iter: 400 | Loss: 2.5636 | Acc: 0.81 | 2026-03-25 11:35:20.293965
+[Eval] Iter: 500 | Loss: 1.7025 | Acc: 0.93 | 2026-03-25 11:35:30.959194
+[Eval] Iter: 600 | Loss: 2.9432 | Acc: 0.86 | 2026-03-25 11:35:41.664760
+[Eval] Iter: 700 | Loss: 3.4711 | Acc: 0.38 | 2026-03-25 11:35:52.295614
+[Eval] Iter: 800 | Loss: 3.2636 | Acc: 0.90 | 2026-03-25 11:36:02.980233
+[Eval] Iter: 900 | Loss: 2.8288 | Acc: 0.67 | 2026-03-25 11:36:13.738813
+[Eval] Iter: 1000 | Loss: 2.1162 | Acc: 0.81 | 2026-03-25 11:36:24.497743
+[Eval] Iter: 1100 | Loss: 2.4048 | Acc: 0.79 | 2026-03-25 11:36:35.264589
+[Eval] Iter: 1200 | Loss: 1.5452 | Acc: 0.96 | 2026-03-25 11:36:46.151988
+[Eval] Iter: 1300 | Loss: 1.6900 | Acc: 0.95 | 2026-03-25 11:36:56.923703
+[Eval] Iter: 1400 | Loss: 2.6763 | Acc: 0.70 | 2026-03-25 11:37:07.826445
+[Eval] Iter: 1500 | Loss: 2.3051 | Acc: 0.91 | 2026-03-25 11:37:18.724287
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.715199 -----
+----- [class 1]  IoU: 0.646191 -----
+----- [class 2]  IoU: 0.736403 -----
+----- [class 3]  IoU: 0.741836 -----
+----- [class 4]  IoU: 0.477818 -----
+----- [class 5]  IoU: 0.846741 -----
+----- [class 6]  IoU: 0.694404 -----
+
+=====[TEST] Loss: 2.3740 | Mean IoU: 0.690566 =====
+
+------------ Options -------------
+base_widths: [128, 64]
+batch_size: 1
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7452 | Acc: 0.95 | 2026-03-25 16:11:10.340619
+[Eval] Iter: 200 | Loss: 1.7153 | Acc: 0.92 | 2026-03-25 16:11:20.878888
+[Eval] Iter: 300 | Loss: 3.1252 | Acc: 0.70 | 2026-03-25 16:11:31.412214
+[Eval] Iter: 400 | Loss: 3.0829 | Acc: 0.81 | 2026-03-25 16:11:42.069084
+[Eval] Iter: 500 | Loss: 1.6602 | Acc: 0.93 | 2026-03-25 16:11:52.982279
+[Eval] Iter: 600 | Loss: 3.5989 | Acc: 0.66 | 2026-03-25 16:12:03.768071
+[Eval] Iter: 700 | Loss: 3.5942 | Acc: 0.52 | 2026-03-25 16:12:14.549053
+[Eval] Iter: 800 | Loss: 3.0357 | Acc: 0.89 | 2026-03-25 16:12:25.311123
+[Eval] Iter: 900 | Loss: 2.7225 | Acc: 0.84 | 2026-03-25 16:12:36.004582
+[Eval] Iter: 1000 | Loss: 2.1800 | Acc: 0.84 | 2026-03-25 16:12:46.690740
+[Eval] Iter: 1100 | Loss: 2.6240 | Acc: 0.74 | 2026-03-25 16:12:57.561804
+[Eval] Iter: 1200 | Loss: 1.6706 | Acc: 0.91 | 2026-03-25 16:13:08.336855
+[Eval] Iter: 1300 | Loss: 1.8285 | Acc: 0.89 | 2026-03-25 16:13:19.061237
+[Eval] Iter: 1400 | Loss: 2.8051 | Acc: 0.78 | 2026-03-25 16:13:29.815016
+[Eval] Iter: 1500 | Loss: 2.3240 | Acc: 0.92 | 2026-03-25 16:13:40.512460
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.780877 -----
+----- [class 1]  IoU: 0.640488 -----
+----- [class 2]  IoU: 0.733700 -----
+----- [class 3]  IoU: 0.800729 -----
+----- [class 4]  IoU: 0.544254 -----
+----- [class 5]  IoU: 0.865613 -----
+----- [class 6]  IoU: 0.805864 -----
+
+=====[TEST] Loss: 2.2723 | Mean IoU: 0.731775 =====
+
+------------ Options -------------
+backbone_name: dgcnn
+base_widths: [128, 64]
+batch_size: 1
+boundary_knn_k: 5
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+fusion_mode: scalar
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+lambda_boundary: 0.1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_boundary_shallow: False
+use_channelwise_dynamic_fusion: False
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.6705 | Acc: 0.96 | 2026-04-08 09:41:32.862084
+[Eval] Iter: 200 | Loss: 1.5129 | Acc: 0.98 | 2026-04-08 09:41:44.180430
+[Eval] Iter: 300 | Loss: 2.8175 | Acc: 0.76 | 2026-04-08 09:41:55.564903
+[Eval] Iter: 400 | Loss: 3.3356 | Acc: 0.61 | 2026-04-08 09:42:06.923999
+[Eval] Iter: 500 | Loss: 1.4918 | Acc: 0.96 | 2026-04-08 09:42:18.248861
+[Eval] Iter: 600 | Loss: 3.5219 | Acc: 0.55 | 2026-04-08 09:42:29.603535
+[Eval] Iter: 700 | Loss: 3.2231 | Acc: 0.44 | 2026-04-08 09:42:41.022526
+[Eval] Iter: 800 | Loss: 2.5314 | Acc: 0.84 | 2026-04-08 09:42:52.384693
+[Eval] Iter: 900 | Loss: 2.9854 | Acc: 0.59 | 2026-04-08 09:43:03.721903
+[Eval] Iter: 1000 | Loss: 2.4891 | Acc: 0.78 | 2026-04-08 09:43:15.055051
+[Eval] Iter: 1100 | Loss: 2.7333 | Acc: 0.77 | 2026-04-08 09:43:26.395179
+[Eval] Iter: 1200 | Loss: 1.9295 | Acc: 0.86 | 2026-04-08 09:43:37.687256
+[Eval] Iter: 1300 | Loss: 1.9694 | Acc: 0.89 | 2026-04-08 09:43:48.966883
+[Eval] Iter: 1400 | Loss: 2.7360 | Acc: 0.76 | 2026-04-08 09:44:00.412832
+[Eval] Iter: 1500 | Loss: 2.6754 | Acc: 0.83 | 2026-04-08 09:44:11.958596
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.702028 -----
+----- [class 1]  IoU: 0.558848 -----
+----- [class 2]  IoU: 0.666247 -----
+----- [class 3]  IoU: 0.753833 -----
+----- [class 4]  IoU: 0.510680 -----
+----- [class 5]  IoU: 0.850275 -----
+----- [class 6]  IoU: 0.732417 -----
+
+=====[TEST] Loss: 2.4511 | Mean IoU: 0.678717 =====
+
+------------ Options -------------
+backbone_name: dgcnn
+base_widths: [128, 64]
+batch_size: 1
+boundary_knn_k: 5
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+fusion_mode: scalar
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+lambda_boundary: 0.1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_boundary_shallow: False
+use_channelwise_dynamic_fusion: False
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7318 | Acc: 0.92 | 2026-04-09 11:44:51.802618
+[Eval] Iter: 200 | Loss: 1.4357 | Acc: 0.97 | 2026-04-09 11:45:02.330877
+[Eval] Iter: 300 | Loss: 3.3799 | Acc: 0.78 | 2026-04-09 11:45:12.813175
+[Eval] Iter: 400 | Loss: 2.7386 | Acc: 0.78 | 2026-04-09 11:45:23.345222
+[Eval] Iter: 500 | Loss: 1.5568 | Acc: 0.93 | 2026-04-09 11:45:33.863208
+[Eval] Iter: 600 | Loss: 3.4185 | Acc: 0.69 | 2026-04-09 11:45:44.369299
+[Eval] Iter: 700 | Loss: 2.9904 | Acc: 0.47 | 2026-04-09 11:45:54.948852
+[Eval] Iter: 800 | Loss: 3.6565 | Acc: 0.88 | 2026-04-09 11:46:05.582230
+[Eval] Iter: 900 | Loss: 3.0417 | Acc: 0.71 | 2026-04-09 11:46:16.199382
+[Eval] Iter: 1000 | Loss: 2.1681 | Acc: 0.83 | 2026-04-09 11:46:26.874848
+[Eval] Iter: 1100 | Loss: 2.8016 | Acc: 0.79 | 2026-04-09 11:46:37.658627
+[Eval] Iter: 1200 | Loss: 1.6622 | Acc: 0.95 | 2026-04-09 11:46:48.473949
+[Eval] Iter: 1300 | Loss: 1.8394 | Acc: 0.92 | 2026-04-09 11:46:59.231139
+[Eval] Iter: 1400 | Loss: 2.9907 | Acc: 0.78 | 2026-04-09 11:47:09.854257
+[Eval] Iter: 1500 | Loss: 3.0961 | Acc: 0.84 | 2026-04-09 11:47:20.498466
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.761315 -----
+----- [class 1]  IoU: 0.623588 -----
+----- [class 2]  IoU: 0.750678 -----
+----- [class 3]  IoU: 0.778877 -----
+----- [class 4]  IoU: 0.571160 -----
+----- [class 5]  IoU: 0.862299 -----
+----- [class 6]  IoU: 0.777284 -----
+
+=====[TEST] Loss: 2.3769 | Mean IoU: 0.727314 =====
+
+------------ Options -------------
+backbone_name: dgcnn
+base_widths: [128, 64]
+batch_size: 1
+boundary_knn_k: 5
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+fusion_mode: scalar
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+lambda_boundary: 0.1
+log_dir: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 2
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N2_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_boundary_shallow: False
+use_channelwise_dynamic_fusion: False
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 1.7327 | Acc: 0.92 | 2026-04-09 11:48:17.759718
+[Eval] Iter: 200 | Loss: 1.4351 | Acc: 0.97 | 2026-04-09 11:48:28.502879
+[Eval] Iter: 300 | Loss: 3.3804 | Acc: 0.78 | 2026-04-09 11:48:39.197433
+[Eval] Iter: 400 | Loss: 2.7384 | Acc: 0.78 | 2026-04-09 11:48:49.911137
+[Eval] Iter: 500 | Loss: 1.5568 | Acc: 0.93 | 2026-04-09 11:49:00.562466
+[Eval] Iter: 600 | Loss: 3.3896 | Acc: 0.69 | 2026-04-09 11:49:11.182829
+[Eval] Iter: 700 | Loss: 2.9830 | Acc: 0.47 | 2026-04-09 11:49:21.803567
+[Eval] Iter: 800 | Loss: 3.6566 | Acc: 0.88 | 2026-04-09 11:49:32.402749
+[Eval] Iter: 900 | Loss: 3.0567 | Acc: 0.71 | 2026-04-09 11:49:43.030883
+[Eval] Iter: 1000 | Loss: 2.1679 | Acc: 0.83 | 2026-04-09 11:49:53.641655
+[Eval] Iter: 1100 | Loss: 2.7991 | Acc: 0.79 | 2026-04-09 11:50:04.434203
+[Eval] Iter: 1200 | Loss: 1.6621 | Acc: 0.95 | 2026-04-09 11:50:15.218497
+[Eval] Iter: 1300 | Loss: 1.8353 | Acc: 0.92 | 2026-04-09 11:50:25.978157
+[Eval] Iter: 1400 | Loss: 2.9841 | Acc: 0.77 | 2026-04-09 11:50:36.664349
+[Eval] Iter: 1500 | Loss: 3.0961 | Acc: 0.84 | 2026-04-09 11:50:47.388555
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.761363 -----
+----- [class 1]  IoU: 0.623861 -----
+----- [class 2]  IoU: 0.750706 -----
+----- [class 3]  IoU: 0.778838 -----
+----- [class 4]  IoU: 0.571103 -----
+----- [class 5]  IoU: 0.862313 -----
+----- [class 6]  IoU: 0.777385 -----
+
+=====[TEST] Loss: 2.3765 | Mean IoU: 0.727368 =====
+
