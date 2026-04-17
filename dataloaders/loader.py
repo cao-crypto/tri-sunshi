@@ -130,22 +130,24 @@ class MyDataset(Dataset):
 
         if dataset_name == 's3dis':
             from dataloaders.s3dis import S3DISDataset
-            self.dataset = S3DISDataset(cvfold, data_path)
+            dataset = S3DISDataset(cvfold, data_path)
         elif dataset_name == 'scannet':
             from dataloaders.scannet import ScanNetDataset
-            self.dataset = ScanNetDataset(cvfold, data_path)
+            dataset = ScanNetDataset(cvfold, data_path)
         else:
             raise NotImplementedError('Unknown dataset %s!' % dataset_name)
 
         if mode == 'train':
-            self.classes = np.array(self.dataset.train_classes)
+            self.classes = np.array(list(dataset.train_classes))  # Convert dict_keys to list
         elif mode == 'test':
-            self.classes = np.array(self.dataset.test_classes)
+            self.classes = np.array(list(dataset.test_classes))   # Convert dict_keys to list
         else:
             raise NotImplementedError('Unkown mode %s! [Options: train/test]' % mode)
 
         print('MODE: {0} | Classes: {1}'.format(mode, self.classes))
-        self.class2scans = self.dataset.class2scans
+        self.class2scans = dataset.class2scans
+        # Delete dataset reference to avoid pickling issues
+        del dataset
 
     def __len__(self):
         return self.num_episode
@@ -255,7 +257,7 @@ def batch_train_task_collate(batch):
 class MyTestDataset(Dataset):
     def __init__(self, data_path, dataset_name, cvfold=0, num_episode_per_comb=100, n_way=3, k_shot=5, n_queries=1,
                        num_point=4096, pc_attribs='xyz', mode='valid'):
-        super(MyTestDataset).__init__()
+        super(MyTestDataset, self).__init__()
 
         dataset = MyDataset(data_path, dataset_name, cvfold=cvfold, n_way=n_way, k_shot=k_shot, n_queries=n_queries,
                             mode='test', num_point=num_point, pc_attribs=pc_attribs, pc_augm=False)
@@ -291,6 +293,9 @@ class MyTestDataset(Dataset):
                     write_episode(out_filename, data)
                     self.file_names.append(out_filename)
                     episode_ind += 1
+
+        # Delete dataset reference to avoid pickling issues
+        del dataset
 
     def __len__(self):
         return self.num_episode
@@ -340,9 +345,9 @@ def read_episode(file_name):
 class MyPretrainDataset(Dataset):
     def __init__(self, data_path, classes, class2scans, mode='train', num_point=4096, pc_attribs='xyz',
                        pc_augm=False, pc_augm_config=None):
-        super(MyPretrainDataset).__init__()
+        super(MyPretrainDataset, self).__init__()
         self.data_path = data_path
-        self.classes = classes
+        self.classes = list(classes)  # Convert to list to ensure pickleability
         self.num_point = num_point
         self.pc_attribs = pc_attribs
         self.pc_augm = pc_augm

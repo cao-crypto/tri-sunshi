@@ -118,7 +118,13 @@ class DGCNN(nn.Module):
             x = x.max(dim=-1, keepdim=False)[0]
             edgeconv_outputs.append(x)
 
-        x_shallow = edgeconv_outputs[0]  # 获取第一个EdgeConv块的输出，形状[B, 64, N]
+        # 使用第二个EdgeConv块的输出作为浅层特征，而不是第一个
+        # 这样可以获取更高级的特征，减少噪声
+        if len(edgeconv_outputs) >= 2:
+            x_shallow = edgeconv_outputs[1]  # 获取第二个EdgeConv块的输出，形状[B, 64, N]
+        else:
+            # 安全回退：如果EdgeConv块少于2个，使用第一个
+            x_shallow = edgeconv_outputs[0]
 
         out = torch.cat(edgeconv_outputs, dim=1) # [16, 192, 2048]
 

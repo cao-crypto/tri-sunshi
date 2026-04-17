@@ -37,9 +37,10 @@ def train(args):
                                   num_point=args.pc_npts, pc_attribs=args.pc_attribs)
     VALID_CLASSES = list(VALID_DATASET.classes)
 
-    TRAIN_LOADER = DataLoader(TRAIN_DATASET, batch_size=1, collate_fn=batch_test_task_collate)
-    VALID_LOADER = DataLoader(VALID_DATASET, batch_size=1, collate_fn=batch_test_task_collate)
-
+#修改
+    TRAIN_LOADER = DataLoader(TRAIN_DATASET, batch_size=1, num_workers=args.n_workers, collate_fn=batch_test_task_collate)
+    VALID_LOADER = DataLoader(VALID_DATASET, batch_size=1, num_workers=args.n_workers, collate_fn=batch_test_task_collate)
+#停止修改
     PL = GPCPRLearner(args)
 
 

@@ -1,0 +1,101 @@
+------------ Options -------------
+backbone_name: dgcnn
+base_widths: [128, 64]
+batch_size: 1
+boundary_knn_k: 5
+cvfold: 0
+data_path: ./datasets/S3DIS/blocks_bs1_s1
+dataset: s3dis
+dd_ratio1: 1.0
+dd_ratio2: 1.0
+dgcnn_k: 20
+dgcnn_mlp_widths: [512, 256]
+dist_method: euclidean
+edgeconv_widths: [[64, 64], [64, 64], [64, 64]]
+embedding_num: 10
+embedding_type: gpt35
+eval_interval: 1500
+fusion_mode: scalar
+gamma: 0.5
+generator_lr: 0.0002
+gmm_dropout: 0.1
+gmm_weight: 0.1
+k_shot: 1
+lambda_boundary: 0.1
+log_dir: ./log_s3dis/GPCPR/S0_N3_K1_Att1
+lr: 0.001
+model_checkpoint_path: ./log_s3dis/GPCPR/S0_N3_K1_Att1
+n_episode_test: 100
+n_iters: 40000
+n_queries: 1
+n_way: 3
+n_workers: 16
+noise_dim: 1024
+output_dim: 64
+pc_attribs: xyzrgbXYZ
+pc_augm: False
+pc_augm_color: 0
+pc_augm_jitter: 1
+pc_augm_mirror_prob: 0
+pc_augm_rot: 1
+pc_augm_scale: 0
+pc_augm_shift: 0
+pc_in_dim: 9
+pc_npts: 2048
+phase: gpcpreval
+pretrain_checkpoint_path: ./log_s3dis/pretrain_S0
+pretrain_gamma: 0.5
+pretrain_lr: 0.001
+pretrain_step_size: 50
+pretrain_weight_decay: 0.0
+save_path: ./log_s3dis/GPCPR/S0_N3_K1_Att1
+step_size: 5000
+train_dim: 320
+trans_lr: 0.0001
+use_align: True
+use_attention: True
+use_boundary_shallow: False
+use_channelwise_dynamic_fusion: False
+use_cps: True
+use_dd_loss: True
+use_high_dgcnn: False
+use_linear_proj: False
+use_mam: True
+use_pcpr: True
+use_supervise_prototype: True
+use_text: True
+use_text_diff: True
+use_transformer: True
+-------------- End ----------------
+
+[Eval] Iter: 100 | Loss: 3.7054 | Acc: 0.75 | 2026-04-15 11:49:53.184860
+[Eval] Iter: 200 | Loss: 3.0474 | Acc: 0.75 | 2026-04-15 11:50:09.500446
+[Eval] Iter: 300 | Loss: 3.0052 | Acc: 0.85 | 2026-04-15 11:50:25.805549
+[Eval] Iter: 400 | Loss: 3.2881 | Acc: 0.78 | 2026-04-15 11:50:42.158604
+[Eval] Iter: 500 | Loss: 3.2423 | Acc: 0.66 | 2026-04-15 11:50:58.357872
+[Eval] Iter: 600 | Loss: 2.9138 | Acc: 0.73 | 2026-04-15 11:51:14.575857
+[Eval] Iter: 700 | Loss: 2.1528 | Acc: 0.87 | 2026-04-15 11:51:30.778110
+[Eval] Iter: 800 | Loss: 6.3921 | Acc: 0.46 | 2026-04-15 11:51:46.992536
+[Eval] Iter: 900 | Loss: 3.0289 | Acc: 0.63 | 2026-04-15 11:52:03.251125
+[Eval] Iter: 1000 | Loss: 2.8918 | Acc: 0.78 | 2026-04-15 11:52:19.512508
+[Eval] Iter: 1100 | Loss: 3.6343 | Acc: 0.67 | 2026-04-15 11:52:35.812164
+[Eval] Iter: 1200 | Loss: 2.1068 | Acc: 0.89 | 2026-04-15 11:52:52.254597
+[Eval] Iter: 1300 | Loss: 2.6603 | Acc: 0.88 | 2026-04-15 11:53:08.713427
+[Eval] Iter: 1400 | Loss: 2.9856 | Acc: 0.78 | 2026-04-15 11:53:25.108284
+[Eval] Iter: 1500 | Loss: 3.4004 | Acc: 0.76 | 2026-04-15 11:53:41.515290
+[Eval] Iter: 1600 | Loss: 2.1815 | Acc: 0.88 | 2026-04-15 11:53:57.920604
+[Eval] Iter: 1700 | Loss: 3.2316 | Acc: 0.77 | 2026-04-15 11:54:14.272165
+[Eval] Iter: 1800 | Loss: 3.6586 | Acc: 0.42 | 2026-04-15 11:54:30.581644
+[Eval] Iter: 1900 | Loss: 1.9189 | Acc: 0.90 | 2026-04-15 11:54:46.880161
+[Eval] Iter: 2000 | Loss: 4.3509 | Acc: 0.75 | 2026-04-15 11:55:03.136131
+*****Test Classes: [3, 11, 10, 0, 8, 4]*****
+----- [class 0]  IoU: 0.674437 -----
+----- [class 1]  IoU: 0.618378 -----
+----- [class 2]  IoU: 0.728515 -----
+----- [class 3]  IoU: 0.704347 -----
+----- [class 4]  IoU: 0.314486 -----
+----- [class 5]  IoU: 0.809960 -----
+----- [class 6]  IoU: 0.728042 -----
+
+=====[TEST] Loss: 2.8384 | Mean IoU: 0.650621 =====
+

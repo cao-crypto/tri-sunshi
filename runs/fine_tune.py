@@ -104,7 +104,7 @@ def finetune(args):
                                  n_way=args.n_way, k_shot=args.k_shot, n_queries=args.n_queries,
                                  num_point=args.pc_npts, pc_attribs=args.pc_attribs, mode='test')
     CLASSES = list(DATASET.classes)
-    DATA_LOADER = DataLoader(DATASET, batch_size=1, collate_fn=batch_test_task_collate)
+    DATA_LOADER = DataLoader(DATASET, batch_size=1, num_workers=args.n_workers, collate_fn=batch_test_task_collate)
     WRITER = SummaryWriter(log_dir=args.log_dir)
 
     #Init model and optimizer

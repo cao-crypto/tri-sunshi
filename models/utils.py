@@ -69,6 +69,15 @@ class PrototypeGuidedGating(nn.Module):
             nn.BatchNorm1d(deep_dim),
             nn.LeakyReLU(0.2)
         )
+        
+        # 可学习的残差缩放参数，初始值设为较小值，使融合更加保守
+        self.fuse_alpha = nn.Parameter(torch.tensor(-2.3), requires_grad=True)  # 初始值对应 sigmoid(-2.3) ≈ 0.1
+        
+        # 可学习的残差缩放参数，初始值设为较小值，使融合更加保守
+        self.fuse_alpha = nn.Parameter(torch.tensor(-2.3), requires_grad=True)  # 初始值对应 sigmoid(-2.3) ≈ 0.1
+        
+        # 可学习的残差缩放参数，初始值设为较小值，使融合更加保守
+        self.fuse_alpha = nn.Parameter(torch.tensor(-2.3), requires_grad=True)  # 初始值对应 sigmoid(-2.3) ≈ 0.1
 
     def forward(self, query_deep, query_shallow, support_proto):
         """
@@ -98,6 +107,8 @@ class PrototypeGuidedGating(nn.Module):
         # 残差融合
         fused = torch.cat([query_deep, refined_shallow], dim=1)  # [B, C_d + C_s, N]
         fused = self.fusion(fused)  # [B, C_d, N]
-        query_refined = fused + query_deep  # 残差连接
+        # 使用可学习的 alpha 参数控制融合强度，初始值约为 0.1
+        alpha = torch.sigmoid(self.fuse_alpha)
+        query_refined = query_deep + alpha * fused  # 残差连接
 
         return query_refined

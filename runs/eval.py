@@ -109,7 +109,7 @@ def eval(args):
                                  n_way=args.n_way, k_shot=args.k_shot, n_queries=args.n_queries,
                                  num_point=args.pc_npts, pc_attribs=args.pc_attribs, mode='test')
     TEST_CLASSES = list(TEST_DATASET.classes)
-    TEST_LOADER = DataLoader(TEST_DATASET, batch_size=1, shuffle=False, collate_fn=batch_test_task_collate,pin_memory=True)
+    TEST_LOADER = DataLoader(TEST_DATASET, batch_size=1, shuffle=False, num_workers=args.n_workers, collate_fn=batch_test_task_collate,pin_memory=True)#修改改行
 
     test_loss, mean_IoU = test_few_shot(TEST_LOADER, learner, logger, TEST_CLASSES)
     logger.cprint('\n=====[TEST] Loss: %.4f | Mean IoU: %f =====\n' % (test_loss, mean_IoU))

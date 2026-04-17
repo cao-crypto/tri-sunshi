@@ -518,13 +518,13 @@ class GPCPR(nn.Module):
                 tep_pred['qgpa']=(query_pred)
 
             if self.use_pcpr:
-                query_bg_fg_features = self.extract_query_features(query_feat, query_pred)  # (n_way+1, kp, d)
+                query_bg_fg_features = self.extract_query_features(query_refined, query_pred)  # (n_way+1, kp, d)
                 spt_prototypes = prototypes_all_post.transpose(0, 1)
                 qry_bg_prototypes = self.proto_compressor([spt_prototypes[:1], query_bg_fg_features[:1], query_bg_fg_features[:1]])  # (n_way, n_proto, d)
                 qry_fg_prototypes = self.proto_compressor([spt_prototypes[1:], query_bg_fg_features[1:],query_bg_fg_features[1:]])  # (n_way, n_proto, d)
                 prototypes_all_post = torch.cat([qry_bg_prototypes, qry_fg_prototypes], dim=0).transpose(0, 1)
                 prototypes_new = torch.chunk(prototypes_all_post, prototypes_all_post.shape[1], dim=1)
-                similarity = [self.calculateSimilarity_trans(query_feat, prototype.squeeze(1), self.dist_method) for
+                similarity = [self.calculateSimilarity_trans(query_refined, prototype.squeeze(1), self.dist_method) for
                               prototype in prototypes_new]
                 query_pred = torch.stack(similarity, dim=1)
                 if self.use_dd_loss:

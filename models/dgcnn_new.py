@@ -371,7 +371,7 @@ class DGCNN_semseg(nn.Module):
         # Return unified structure
         return {
             'final_feat': out,
-            'shallow_feat': x1,
+            'shallow_feat': x2,  # 使用第二个EdgeConv块的输出作为浅层特征
             'xyz': xyz.transpose(1, 2),  # [B, N, 3]
             'multi_scale_feats': [x1, x2, x3]
         }

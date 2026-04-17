@@ -4,9 +4,16 @@
 import os
 import ast
 import argparse
+import warnings
 
 # 设置环境变量以避免 OpenMP 冲突
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
+
+# 抑制 NumPy 重载警告
+warnings.filterwarnings('ignore', category=UserWarning, message='The NumPy module was reloaded.*')
+
+# 抑制 PyTorch 损失函数 reduction 警告
+warnings.filterwarnings('ignore', category=UserWarning, message='reduction: \'mean\' divides the total loss by both the batch size and the support size.*')
 
 
 if __name__ == '__main__':

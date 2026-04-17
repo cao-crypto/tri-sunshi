@@ -109,7 +109,7 @@ def pretrain(args):
     else:
         raise NotImplementedError('Unknown dataset %s!' % args.dataset)
 
-    CLASSES = DATASET.train_classes
+    CLASSES = list(DATASET.train_classes)  # Convert to list to ensure pickleability
     NUM_CLASSES = len(CLASSES) + 1
     CLASS2SCANS = {c: DATASET.class2scans[c] for c in CLASSES}
 
@@ -204,4 +204,3 @@ def pretrain(args):
                 save_pretrain_checkpoint(model, args.log_dir)
             logger.cprint('=====Best IoU Is: %f =====' % (best_iou))
     WRITER.close()
-
